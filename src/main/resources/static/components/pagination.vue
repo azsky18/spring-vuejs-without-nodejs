@@ -44,17 +44,21 @@ module.exports = {
 			var start = Math.max(end - this.paginationSize, 1);
 			var length = Math.min(start + this.paginationSize - 1, totalPages);
 
-			var list = [];
+			var pages = [];
 			for (var i = start; i <= length; i++) {
-			    list.push(i);
+			    pages.push(i);
 			}
 			
-			return list;
+			if (pages.length <= 0) {
+				pages = [1];
+			}
+			
+			return pages;
 		}
 	},
 	methods: {
 		select: function(page) {
-			this.current = Math.min(Math.max(1, page), this.pageable.totalPages);
+			this.current = Math.max(1, Math.min(page, this.pageable.totalPages));
 			this.$emit('select', this.baseOn == 0 ? this.current - 1 : this.current);
 		}
 	}

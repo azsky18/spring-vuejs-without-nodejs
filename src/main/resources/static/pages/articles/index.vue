@@ -11,6 +11,9 @@
 			<td><router-link :to="'/articles/' + article.id">{{article.title}}</router-link></td>
 			<td>{{article.modifiedAt | formatDateTime('YYYY-MM-DD HH:mm:ss')}}</td>
 		</tr>
+		<tr v-if="articles.totalElements == 0">
+			<td class="empty" colspan="3">No Available Data</td>
+		</tr>
 	</table>
 	<pagination :pageable="articles" @select="fetchArticles"></pagination>
 	<div class="btns">
@@ -55,5 +58,10 @@ module.exports = {
 <style scoped>
 table {
 	margin-top: 100px;
+}
+
+table td.empty {
+	text-align: center;
+	padding: 15px 0;
 }
 </style>
