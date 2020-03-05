@@ -1,12 +1,12 @@
-package com.ingyeo.vuejs.common.vuejs;
+package com.ingyeo.vuejs.common.vue;
 
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
 import com.google.common.collect.Lists;
-import com.ingyeo.vuejs.common.vuejs.VueRouter;
-import com.ingyeo.vuejs.common.vuejs.VueRouters;
+import com.ingyeo.vuejs.common.vue.VueRouter;
+import com.ingyeo.vuejs.common.vue.VueRouters;
 
 public class VueRoutersTest {
 //	@Test

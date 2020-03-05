@@ -5,11 +5,14 @@
 <body>
 	<main-layout id="app"></main-layout>
 </body>
-<script src="/js/vuejs/vue.js"></script>
-<script src="/js/vuejs/vue-router.js"></script>
-<script src="/js/vuejs/http-vue-loader.js"></script>
-<script src="/js/vuejs/vue-resource.min.js"></script>
-<script src="/js/util/moment-with-locales.min.js"></script>
+<!-- 
+<script data-main="/js/main" src="/js/lib/require.min.js"></script>
+ -->
+<script src="/js/lib/vue.js"></script>
+<script src="/js/lib/vue-router.js"></script>
+<script src="/js/lib/http-vue-loader.js"></script>
+<script src="/js/lib/vue-resource.min.js"></script>
+<script src="/js/lib/moment-with-locales.min.js"></script>
 <script>
 Vue.filter('formatDateTime', function(value, format) {
 	return moment(value).format(format);
@@ -48,21 +51,21 @@ var router = new VueRouter({
 });
 
 var app = new Vue({
-	router,
+	router: router,
 	el: '#app',
 	mounted: function() {
 		this.fetchRoutes();
 	},
 	methods: {
 		fetchRoutes: function() {
-			this.$http.get('/vue-initialize').then(
+			this.$http.get('/initialize').then(
 				function(response) {
 					var routes = this.makeRoutes(response.data.vueRouters);
 					this.$router.addRoutes(routes);
 				},
 				function(error) {
-					console.error('vue-initialize failed', error);
-					alert('vue-initialize failed\n' + error.body.message);
+					console.error('initialize failed', error);
+					alert('initialize failed\n' + error.body.message);
 				}
 			)
 		},

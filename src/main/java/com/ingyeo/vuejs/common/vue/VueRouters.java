@@ -1,4 +1,4 @@
-package com.ingyeo.vuejs.common.vuejs;
+package com.ingyeo.vuejs.common.vue;
 
 import java.util.Collection;
 import java.util.List;

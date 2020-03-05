@@ -1,4 +1,4 @@
-package com.ingyeo.vuejs.common.vuejs;
+package com.ingyeo.vuejs.common.vue;
 
 import java.io.File;
 import java.io.IOException;

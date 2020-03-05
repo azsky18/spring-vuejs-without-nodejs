@@ -1,4 +1,4 @@
-package com.ingyeo.vuejs.common.vuejs;
+package com.ingyeo.vuejs.common.vue;
 
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 

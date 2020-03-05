@@ -11,8 +11,8 @@ module.exports = {
 </script>
 
 <style scoped>
-	div {
-		text-align: center;
-		padding: 100px;
-	}
+div {
+	text-align: center;
+	padding: 100px;
+}
 </style>

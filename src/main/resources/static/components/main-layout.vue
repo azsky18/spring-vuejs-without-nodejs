@@ -96,6 +96,7 @@ header p {
 	padding: 5px 10px;
 }
 main {
+	display: block;
 	min-height: calc(100vh - 110px);
     margin: 0 auto;
     width: 800px;

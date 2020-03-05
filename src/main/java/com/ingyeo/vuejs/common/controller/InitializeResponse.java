@@ -1,6 +1,6 @@
-package com.ingyeo.vuejs.common.vuejs.controller;
+package com.ingyeo.vuejs.common.controller;
 
-import com.ingyeo.vuejs.common.vuejs.VueRouters;
+import com.ingyeo.vuejs.common.vue.VueRouters;
 
 import lombok.Data;
 
