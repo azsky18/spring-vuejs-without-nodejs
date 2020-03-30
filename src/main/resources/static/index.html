@@ -1,9 +1,16 @@
-<html>
+<!doctype html>
+<html lang="ko">
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Test-Project</title>
 	<link rel="stylesheet" href="/css/style.css"></link>
 </head>
 <body>
-	<main-layout id="app"></main-layout>
+	<div id="app">
+		<div id="loading-bar" v-show="loading">loading...</div>	
+		<main-layout v-show="!loading"></main-layout>
+	</div>
 </body>
 <!-- 
 <script data-main="/js/main" src="/js/lib/require.min.js"></script>
@@ -53,6 +60,9 @@ var router = new VueRouter({
 var app = new Vue({
 	router: router,
 	el: '#app',
+	data: {
+		loading: true
+	},
 	mounted: function() {
 		this.fetchRoutes();
 	},
@@ -88,6 +98,15 @@ var app = new Vue({
 	components: {
 		'main-layout': httpVueLoader('/components/main-layout.vue')
 	}
+});
+
+router.beforeEach(function(to, from, next) {
+	app.loading = true;
+	next();
+});
+
+router.afterEach(function(to, from) {
+	app.loading = false;
 });
 </script>
 </html>

@@ -1,33 +1,33 @@
 <template>
 <div>
-<header>
-	<h3><router-link to="/">Test-Project</router-link></h3>
-	<p>hi this is test header</p>
-</header>
-<nav class="global-nav">
-	<ul>
-		<li>
-			<router-link to="/articles">Articles</router-link>
-		</li>
-		<li class="has-sub-item">
-			<router-link to="/users">Users</router-link>
-			<ul>
-				<li>
-					<router-link to="/users/1">Go to User 1</router-link>
-				</li>
-				<li>
-					<router-link to="/users/2">Go to User 2</router-link>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</nav>
-<main>
-	<router-view></router-view>
-</main>
-<footer>
-	Copyright ⓒ 2020 Test-Project
-</footer>
+	<header>
+		<h3><router-link to="/">Test-Project</router-link></h3>
+		<p>hi this is test header</p>
+	</header>
+	<nav class="global-nav">
+		<ul>
+			<li>
+				<router-link to="/articles">Articles</router-link>
+			</li>
+			<li class="has-sub-item">
+				<router-link to="/users">Users</router-link>
+				<ul>
+					<li>
+						<router-link to="/users/1">Go to User 1</router-link>
+					</li>
+					<li>
+						<router-link to="/users/2">Go to User 2</router-link>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<router-view></router-view>
+	</main>
+	<footer>
+		Copyright ⓒ 2020 Test-Project
+	</footer>
 </div>
 </template>
 
