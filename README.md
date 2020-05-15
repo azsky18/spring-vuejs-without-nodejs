@@ -2,8 +2,7 @@
 
 
 ### 개요
-.vue 파일을 Webpack 없이 Spring Boot Application에서 수행하는 예제입니다.  
-Vuejs를 이용해 간단한 프로젝트 하나 하려고해도 Node.js 깔고 뭐하고 할게 많아서 만들었어요.  
+Node.js나 Webpack등 javascript Server 도구 없이 Spring으로 수행되는 Vuejs 프로젝트입니다.
 
 ### 의존성
 다음 프로젝트에 의존적입니다.
